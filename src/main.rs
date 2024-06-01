@@ -100,9 +100,13 @@ fn main() -> Result<(), FileHashError> {
     for (hash, files) in file_list {
         if let Some(first_file) = files.first() {
             println!("Hash: {}", hash);
-            println!("First Instance: {}", first_file.path.display());
             println!("Count: {}", files.len());
-            println!("Size: {} bytes\n", first_file.size);
+            println!("Size: {} bytes", first_file.size);
+            println!("Instances: ");
+            for file in files {
+                println!("\t-{}", file.path.display());
+            }
+            println!("");
         }
     }
 
