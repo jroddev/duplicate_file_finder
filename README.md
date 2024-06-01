@@ -1,6 +1,7 @@
 ## Duplicate File Finder
 Small utility to recursively scan a directory tree to find duplicate files.
-Duplication is based purely on the [sha256](https://github.com/RustCrypto/hashes) hash of the file content.
+Duplication is based purely on the [sha256](https://github.com/RustCrypto/hashes) hash of the file content.  
+I have only tested on Linux, but it ***should*** also work on Windows and Mac
 
 ### Progress Tracking
 The tool uses [indicatif](https://github.com/console-rs/indicatif/tree/main) to show progress.
